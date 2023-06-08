@@ -1,0 +1,68 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block style %}
+	<!-- scripts related to highchart.js and creating chart -->
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-12 col-md-6 mx-auto mt-4">
+			<div class="card shadow py-4 px-37">
+				<div class="card-body">
+					<img
+						class="justify-content-center d-flex mx-auto"
+						src="{% static './img/data-predict.png' %}"
+						width="200px"
+						alt=""
+						load="'lazy"
+					/>
+					<h2 class="py-3 text-center text-muted">پیش بینی داده</h2>
+
+					<div class="container p-3">
+						<form method="POST" enctype="multipart/form-data">
+							{% csrf_token %} {{ form.non_field_errors }}
+							<div class="fieldWrapper">
+								{{ form.file.errors }}
+								<label for="{{ form.file.id_for_label }}"
+									>فایل اکسل:‌</label
+								>
+								{{ form.file }}
+							</div>
+							<div class="fieldWrapper">
+								{{ form.target_column.errors }}
+								<label for="{{ form.target_column.id_for_label }}"
+									>نام ستون اکسل برای پیش بینی:</label
+								>
+								{{ form.target_column }}
+							</div>
+
+							<button type="submit" class="btn btn-primary mx-auto d-flex w-100 text-center justify-content-center mt-4">
+								پردازش و ایجاد نمودار پیش بینی
+							</button>
+						</form>
+					</div>
+
+					<br />
+					{% if text %}
+					<hr class="border border-danger border-2 opacity-50" />
+
+					<div class="container py-3 mt-5 border border-info rounded">
+						<p class="text-justify">{{ text }}</p>
+					</div>
+
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+{% endblock %}

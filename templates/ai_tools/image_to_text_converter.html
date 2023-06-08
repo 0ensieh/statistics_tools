@@ -1,0 +1,45 @@
+{% extends '../base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container">
+    <div class=" row">
+        <div class="col-12 col-md-6 mx-auto mt-4">
+            <div class="card shadow py-4 px-37">
+                <div class="card-body">
+                    <img class="justify-content-center d-flex mx-auto" src="{% static './img/icon.svg' %}" width="80px" alt="" load="'lazy">
+                    <h2 class="py-5 text-center text-muted ">تبدیل عکس به متن</h2>
+                   
+                    
+
+                    <div class="container">
+                        <form method="POST" action="" enctype='multipart/form-data'>
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit" class="btn btn-primary mx-auto d-flex w-100 text-center justify-content-center">تبدیل کنید</button>
+                        </form>
+                    </div>
+
+                    
+                    <br>
+                    {% if text %}
+                        <hr class="border border-danger border-2 opacity-50">
+
+                        <div class="container py-3 mt-5 border border-info rounded">
+                            <p class="text-justify">
+                                {{ text }}
+                            </p>
+                        </div>
+
+                    {% endif %}
+
+
+    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

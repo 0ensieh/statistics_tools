@@ -1,0 +1,154 @@
+{% extends '../base.html' %} 
+{% load static %} 
+
+
+{% block style %}
+	<!-- scripts related to highchart.js and creating chart -->
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+{% endblock %} 
+
+
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-12 col-md-6 mx-auto mt-4">
+			<div class="card shadow py-4 px-37">
+				<div class="card-body">
+					<img
+						class="justify-content-center d-flex mx-auto"
+						src="{% static './img/data-distribution.png' %}"
+						width="120px"
+						alt=""
+						load="'lazy"
+					/>
+					<h2 class="py-3 text-center text-muted">توزیع داده</h2>
+
+					<div class="container p-3">
+						<form method="POST" enctype="multipart/form-data">
+							{% csrf_token %} {{ form.as_p }}
+							<button
+								type="submit"
+								class="btn btn-primary mx-auto d-flex w-100 text-center justify-content-center mt-4">
+								پردازش و ایجاد نمودار توزیع
+							</button>
+						</form>
+					</div>
+
+					<br />
+					{% if text %}
+						<hr class="border border-danger border-2 opacity-50" />
+
+						<div class="container py-3 mt-5 border border-info rounded">
+							<p class="text-justify">{{ text }}</p>
+						</div>
+
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="chart-container" class="m-4 p-4"></div>
+	{% if distribution_types %}
+		<ul class="list-group m-4 p-4">
+			{% for column, distribution_type in distribution_types.items %}
+				<li class="list-group-item">{{ column }}: {{ distribution_type }}</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+</div>
+
+{% endblock %} {% block js %}
+	<script>
+		const chartData = {{ data|safe }};
+
+		// Prepare chart series data
+		const seriesData = chartData.map(item => {
+			return {
+				name: item.name,
+				data: item.data
+			};
+		});
+
+		// Configure chart options
+		const chartOptions = {
+			chart: {
+				renderTo: 'chart-container',
+				type: 'column',
+				zoomType: 'xy'
+			},
+			title: {
+				text: 'توزیع داده ها'
+			},
+			xAxis: {
+				categories: Object.keys(chartData[0].data),
+				title: {
+					text: 'دسته بندی'
+				}
+			},
+			yAxis: {
+				title: {
+					text: 'تعداد'
+				}
+			},
+			plotOptions: {
+				column: {
+					grouping: false,
+					shadow: false
+				}
+			},
+			series: seriesData,
+			credits: {
+				enabled: false
+			},
+			exporting: {
+				buttons: {
+					contextButton: {
+		menuItems: [
+			{
+			text: 'دانلود با فرمت png',
+			onclick: function () {
+				this.exportChart({
+				type: 'image/png'
+				});
+			}
+			},
+			{
+			text: 'دانلود با فرمت jpeg',
+			onclick: function () {
+				this.exportChart({
+				type: 'image/jpeg'
+				});
+			}
+			},
+			{
+			text: 'دانلود با فرمت pdf',
+			onclick: function () {
+				this.exportChart({
+				type: 'application/pdf'
+				});
+			}
+			},
+			{
+			text: 'دانلود با فرمت svg',
+			onclick: function () {
+				this.exportChart({
+				type: 'image/svg+xml'
+				});
+			}
+			},
+			{
+
+			}
+		]
+		}
+				}
+			}
+		};
+
+		// Render chart
+		Highcharts.chart(chartOptions);
+	</script>
+{% endblock %}

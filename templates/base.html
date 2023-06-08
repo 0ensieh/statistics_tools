@@ -1,0 +1,2486 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script
+			async=""
+			src="https://www.googletagmanager.com/gtag/js?id=G-RGDEVWSPNZ"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-RGDEVWSPNZ");
+		</script>
+
+		<meta name="samandehi" content="218522263" />
+
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+		<meta name="enamad" content="198045" />
+		<title>اس دیتا | SData</title>
+
+		<link href="{% static './css/bootstrap.min.css' %}" rel="stylesheet" />
+		<link href="{% static './bootstrap-icons.css' %}" rel="stylesheet" />
+		<link href="{% static './css/boxicons.min.css' %}" rel="stylesheet" />
+		<link href="{% static './css/glightbox.min.css' %}" rel="stylesheet" />
+		<link href="{% static './css/swiper-bundle.min.css' %}" rel="stylesheet" />
+		<link rel="stylesheet" href="{% static './css/index.css' %}" />
+
+		<link href="{% static './css/style.css' %}" rel="stylesheet" />
+		<link href="{% static './css/new.css' %}" rel="stylesheet" />
+		<!-- <link href="{% static './css/customStyle.css' %}" rel="stylesheet" /> -->
+		<link href="{% static './css/megamenu.css' %}" rel="stylesheet" />
+
+		<script>
+			(function () {
+				var INSTALL_OPTIONS = { token: "64608-f0f64-729bf-eeb17" };
+				!(function (t, e, a, n, d, c) {
+					function o() {
+						(d = e.createElement("script")),
+							(t._hantanaSettings = { tId: n, i: c }),
+							(d.type = "text/javascript"),
+							(d.async = !0),
+							(d.src = "https://hantana.org/widget/" + n),
+							(h = e.getElementsByTagName("head")[0]),
+							h.appendChild(d);
+					}
+					e.addEventListener("readystatechange", function () {
+						"interactive" === e.readyState &&
+							(c = document.documentElement.scrollTop);
+					}),
+						"complete" === e.readyState
+							? o()
+							: t.attachEvent
+							? t.attachEvent("onload", o)
+							: t.addEventListener("load", o, !1);
+				})(window, document, 0, INSTALL_OPTIONS.token, 0);
+			})();
+		</script>
+		<script ecommerce-type="extend-native-history-api">
+			(() => {
+				const nativePushState = history.pushState;
+				const nativeReplaceState = history.replaceState;
+				const nativeBack = history.back;
+				const nativeForward = history.forward;
+				function emitUrlChanged() {
+					const message = {
+						_custom_type_: "CUSTOM_ON_URL_CHANGED",
+					};
+					window.postMessage(message);
+				}
+				history.pushState = function () {
+					nativePushState.apply(history, arguments);
+					emitUrlChanged();
+				};
+				history.replaceState = function () {
+					nativeReplaceState.apply(history, arguments);
+					emitUrlChanged();
+				};
+				history.back = function () {
+					nativeBack.apply(history, arguments);
+					emitUrlChanged();
+				};
+				history.forward = function () {
+					nativeForward.apply(history, arguments);
+					emitUrlChanged();
+				};
+			})();
+		</script>
+		<script
+			type="text/javascript"
+			async=""
+			src="https://hantana.org/widget/64608-f0f64-729bf-eeb17"
+		></script>
+		<script async="" src="https://www.goftino.com/widget/eMMKuE"></script>
+		<script
+			type="text/javascript"
+			async=""
+			src="https://hantana.org/widgets/js/html2canvas.min.js"
+		></script>
+		<style>
+			/* feedback1 */
+			.animated_hantana {
+				-webkit-animation-duration: 1s;
+				animation-duration: 1s;
+				-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
+			}
+			@-webkit-keyframes fadeIn_hantana {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			@keyframes fadeIn_hantana {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			@-webkit-keyframes pulse_hantana {
+				from {
+					-webkit-transform: scale3d(1, 1, 1) translateX(-50%) translateY(-50%);
+					transform: scale3d(1, 1, 1) translateX(-50%) translateY(-50%);
+				}
+				50% {
+					-webkit-transform: scale3d(1.05, 1.05, 1.05) translateX(-50%)
+						translateY(-50%);
+					transform: scale3d(1.05, 1.05, 1.05) translateX(-50%) translateY(-50%);
+				}
+				to {
+					-webkit-transform: scale3d(1, 1, 1) translateX(-50%) translateY(-50%);
+					transform: scale3d(1, 1, 1) translateX(-50%) translateY(-50%);
+				}
+			}
+			@keyframes pulse_hantana {
+				from {
+					-webkit-transform: scale3d(1, 1, 1) translateX(-50%) translateY(-50%);
+					transform: scale3d(1, 1, 1) translateX(-50%) translateY(-50%);
+				}
+				50% {
+					-webkit-transform: scale3d(1.05, 1.05, 1.05) translateX(-50%)
+						translateY(-50%);
+					transform: scale3d(1.05, 1.05, 1.05) translateX(-50%) translateY(-50%);
+				}
+				to {
+					-webkit-transform: scale3d(1, 1, 1) translateX(-50%) translateY(-50%);
+					transform: scale3d(1, 1, 1) translateX(-50%) translateY(-50%);
+				}
+			}
+			@keyframes hingeFlipIn_hantana {
+				0% {
+					opacity: 0;
+					transform: perspective(600px) rotateX(0);
+					transform-origin: center top;
+					animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
+				}
+				50% {
+					transform: perspective(600px) rotateX(-10deg);
+					transform-origin: center top;
+					animation-timing-function: ease-in;
+				}
+				100% {
+					opacity: 1;
+					transform: perspective(600px) rotateX(0);
+					transform-origin: center top;
+					animation-timing-function: ease-out;
+				}
+			}
+			.hingeFlipIn_hantana_animate {
+				animation-name: hingeFlipIn_hantana;
+			}
+			.pulse_hantana_animate {
+				-webkit-animation-name: pulse_hantana;
+				animation-name: pulse_hantana;
+			}
+			.fadeIn_hantana_animate {
+				-webkit-animation-name: fadeIn_hantana;
+				animation-name: fadeIn_hantana;
+			}
+			.div_hantana_open_feedback_float_right {
+				position: fixed !important;
+				width: 60px;
+				height: 60px;
+				cursor: pointer;
+				border-radius: 20px;
+				transition: 0.1s;
+				z-index: 2147483647;
+				text-align: center;
+				right: 20px;
+				bottom: 20px;
+				padding: 17px 10px 17px 10px !important;
+				min-height: 60px;
+				box-sizing: border-box !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				direction: ltr;
+			}
+			.div_hantana_open_feedback_float_right:hover {
+				transition: 0.1s;
+				box-sizing: border-box !important;
+			}
+			.div_hantana_open_feedback_float_left {
+				position: fixed !important;
+				width: 60px;
+				height: 60px;
+				cursor: pointer;
+				border-radius: 20px;
+				transition: 0.1s;
+				z-index: 2147483647;
+				text-align: center;
+				left: 20px;
+				bottom: 20px;
+				padding: 17px 10px 17px 10px !important;
+				min-height: 60px;
+				box-sizing: border-box !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				direction: ltr;
+			}
+			.div_hantana_open_feedback_float_left:hover {
+				transition: 0.1s;
+				box-sizing: border-box !important;
+			}
+			.div_hantana_open_feedback_right {
+				position: fixed !important;
+				width: 40px;
+				height: 135px;
+				cursor: pointer;
+				border-radius: 3px;
+				transition: 0.1s;
+				z-index: 2147483647;
+				top: 50vh;
+				text-align: center;
+				transform: translateX(-50%) translateY(-50%);
+				right: -19px;
+				margin-right: -4px !important;
+				padding: 17px 10px 17px 10px !important;
+				min-height: 70px;
+				box-sizing: border-box !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				direction: ltr;
+			}
+			.div_hantana_open_feedback_right:hover {
+				margin-right: -2px !important;
+				transition: 0.1s;
+				box-sizing: border-box !important;
+			}
+			.img_hantana_main_feedback_logo_power_fa {
+				width: 69px;
+				vertical-align: middle;
+				margin: -1px 2px 0 0px;
+			}
+			.img_hantana_main_feedback_logo_power_en {
+				width: 69px;
+				vertical-align: middle;
+				margin: -1px 0 0 2px;
+			}
+			.div_hantana_open_feedback_left {
+				position: fixed !important;
+				height: 135px !important;
+				width: 40px !important;
+				cursor: pointer;
+				border-radius: 3px;
+				transition: 0.1s;
+				z-index: 2147483647;
+				top: 50vh;
+				text-align: center;
+				transform: translateX(-50%) translateY(-50%);
+				left: 16px;
+				margin-right: -4px !important;
+				padding: 17px 10px 17px 10px !important;
+				min-height: 70px;
+				box-sizing: border-box !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_hantana_open_feedback_left:hover {
+				margin-left: 2px !important;
+				transition: 0.1s;
+				box-sizing: border-box !important;
+			}
+			.div_hantana_open_text_feedback {
+				font-family: hantanaVazir !important;
+				padding: 5px 0 !important;
+				writing-mode: vertical-rl;
+				font-size: 16px;
+				text-align: center;
+				min-height: 70px;
+				max-height: 78px;
+				box-sizing: border-box !important;
+				-webkit-transform: rotate(180deg);
+				-moz-transform: rotate(180deg);
+				-ms-transform: rotate(180deg);
+				-o-transform: rotate(180deg);
+				transform: rotate(180deg);
+				font-weight: 400 !important;
+				letter-spacing: -1px !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				word-break: normal !important;
+				word-wrap: normal !important;
+				white-space: nowrap !important;
+			}
+			.div_hantana_main_feedback_float_right {
+				position: fixed !important;
+				background: #fff;
+				color: #4d4d4d;
+				width: 320px;
+				border-radius: 15px !important;
+				transition: 0.1s;
+				z-index: 2147483647;
+				bottom: 105px;
+				text-align: center;
+				box-shadow: 0 6px 100px 0 rgba(0, 0, 0, 0.35) !important;
+				display: none;
+				right: 23px; /* margin-right: -4px; */
+				padding: 5px 0 5px 0 !important;
+				box-sizing: border-box !important;
+				min-height: 210px;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_hantana_main_feedback_float_left {
+				position: fixed !important;
+				background: #fff;
+				color: #4d4d4d;
+				width: 320px;
+				border-radius: 15px !important;
+				transition: 0.1s;
+				z-index: 2147483647;
+				bottom: 105px;
+				text-align: center;
+				box-shadow: 0 6px 100px 0 rgba(0, 0, 0, 0.35) !important;
+				display: none;
+				left: 23px; /* margin-right: -4px; */
+				padding: 5px 0 5px 0 !important;
+				box-sizing: border-box !important;
+				min-height: 210px;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_hantana_main_feedback_right {
+				position: fixed !important;
+				background: #fff;
+				color: #4d4d4d;
+				width: 320px;
+				border-radius: 15px !important;
+				transition: 0.1s;
+				z-index: 2147483647;
+				top: 50vh;
+				text-align: center;
+				box-shadow: 0 6px 100px 0 rgba(0, 0, 0, 0.35) !important;
+				display: none;
+				right: -125px;
+				margin-right: -4px;
+				padding: 5px 0 5px 0 !important;
+				box-sizing: border-box !important;
+				min-height: 210px;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_hantana_main_feedback_left {
+				position: fixed !important;
+				background: #fff;
+				color: #4d4d4d;
+				width: 320px;
+				border-radius: 15px !important;
+				transition: 0.1s;
+				z-index: 2147483647;
+				top: 50vh;
+				text-align: center;
+				box-shadow: 0 6px 100px 0 rgba(0, 0, 0, 0.35) !important;
+				display: none;
+				left: 190px;
+				margin-right: -4px;
+				padding: 5px 0 5px 0 !important;
+				box-sizing: border-box !important;
+				min-height: 210px;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_hantana_main_close_feedback {
+				background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgMzQ4LjMzMyAzNDguMzM0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzNDguMzMzIDM0OC4zMzQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIiBjbGFzcz0iIj48Zz48Zz4KCTxwYXRoIGQ9Ik0zMzYuNTU5LDY4LjYxMUwyMzEuMDE2LDE3NC4xNjVsMTA1LjU0MywxMDUuNTQ5YzE1LjY5OSwxNS43MDUsMTUuNjk5LDQxLjE0NSwwLDU2Ljg1ICAgYy03Ljg0NCw3Ljg0NC0xOC4xMjgsMTEuNzY5LTI4LjQwNywxMS43NjljLTEwLjI5NiwwLTIwLjU4MS0zLjkxOS0yOC40MTktMTEuNzY5TDE3NC4xNjcsMjMxLjAwM0w2OC42MDksMzM2LjU2MyAgIGMtNy44NDMsNy44NDQtMTguMTI4LDExLjc2OS0yOC40MTYsMTEuNzY5Yy0xMC4yODUsMC0yMC41NjMtMy45MTktMjguNDEzLTExLjc2OWMtMTUuNjk5LTE1LjY5OC0xNS42OTktNDEuMTM5LDAtNTYuODUgICBsMTA1LjU0LTEwNS41NDlMMTEuNzc0LDY4LjYxMWMtMTUuNjk5LTE1LjY5OS0xNS42OTktNDEuMTQ1LDAtNTYuODQ0YzE1LjY5Ni0xNS42ODcsNDEuMTI3LTE1LjY4Nyw1Ni44MjksMGwxMDUuNTYzLDEwNS41NTQgICBMMjc5LjcyMSwxMS43NjdjMTUuNzA1LTE1LjY4Nyw0MS4xMzktMTUuNjg3LDU2LjgzMiwwQzM1Mi4yNTgsMjcuNDY2LDM1Mi4yNTgsNTIuOTEyLDMzNi41NTksNjguNjExeiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+PC9nPiA8L3N2Zz4K") !important;
+				width: 27px;
+				height: 27px;
+				background-size: 11px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				border-radius: 50px !important;
+				position: absolute;
+				right: 17px;
+				top: -14px;
+				cursor: pointer;
+				box-sizing: border-box !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.img_hantana_open_icon_feedback {
+				width: 20px;
+				cursor: pointer;
+				position: relative;
+				box-sizing: border-box !important;
+				margin-top: 4px;
+				margin-bottom: -4px;
+			}
+			.img_hantana_open_icon_feedback_float {
+				width: 28px;
+				cursor: pointer;
+				position: relative;
+				box-sizing: border-box !important;
+				margin: -1px 0 0 0;
+				user-select: none;
+				display: inline-block !important;
+			}
+			.div_hantana_main_100_feedback {
+				width: 100%;
+				text-align: center;
+				white-space: nowrap;
+				box-sizing: border-box !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				direction: ltr !important;
+			}
+			.div_hantana_main_50_feedback {
+				width: 50%;
+				text-align: center;
+				white-space: nowrap;
+				display: block;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_hantana_power_btn_main_1 {
+				display: flex !important;
+				padding: 0 0 5px 0px !important;
+				margin: 0 !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				direction: ltr !important;
+			}
+			.img_hantana_main_feedback_1 {
+				width: 52px;
+				cursor: pointer !important;
+				padding: 8px 5px !important;
+				position: relative;
+				box-sizing: border-box !important;
+				margin: 0 auto !important;
+			}
+			.div_img_main_hantana {
+				display: inline-block;
+				width: 52px !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				height: auto;
+				overflow: auto;
+			}
+			.div_img_main_hantana:after {
+				content: "";
+				width: 0;
+				height: 0;
+				border-left: 7px solid transparent;
+				border-right: 7px solid transparent;
+				border-bottom: 9px solid #fff;
+				clear: both;
+				margin-right: auto;
+				margin-left: auto;
+				display: block;
+				box-sizing: border-box !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_img_main_hantana.show-after:after {
+				border-bottom: 9px solid #eee;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.p_hantana_main_feedback_1 {
+				font-family: hantanaVazir !important;
+				letter-spacing: 0 !important;
+				margin: 16px 0 !important;
+				padding: 20px 15px 0 15px !important;
+				box-sizing: border-box !important;
+				font-size: 16px !important;
+				font-weight: 400;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				text-align: center !important;
+				transform-origin: initial !important;
+				color: #111 !important;
+			}
+			.p_hantana_main_feedback_2 {
+				font-family: hantanaVazir !important;
+				font-size: 12px !important;
+				font-weight: 100 !important;
+				text-align: left !important;
+				letter-spacing: 0 !important;
+				padding: 15px 20px 10px 30px !important;
+				margin: 8px 0px 6px 0px !important;
+				box-sizing: border-box !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				display: flex;
+				direction: ltr;
+			}
+			.textArea_hantana_main_feedback_1 {
+				font-family: hantanaVazir !important;
+				width: 100% !important;
+				border: 0 !important;
+				background: #eee !important;
+				resize: none !important;
+				border-radius: 0;
+				padding: 10px 13px !important;
+				font-size: 13px !important;
+				height: 105px !important;
+				min-height: 105px !important;
+				margin: 0px !important;
+				color: #313131 !important;
+				margin-left: 0 !important;
+				box-sizing: border-box !important;
+				box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				font-weight: 400 !important;
+				border-radius: 0 !important;
+			}
+			.textArea_hantana_main_feedback_1::-webkit-scrollbar {
+				width: 6px;
+			}
+			.textArea_hantana_main_feedback_1::-webkit-scrollbar-thumb:hover {
+				background: #555;
+				cursor: pointer;
+			}
+			.textArea_hantana_main_feedback_1::placeholder {
+				color: #888888;
+				opacity: 1;
+			}
+			.textArea_hantana_main_feedback_1:-ms-input-placeholder {
+				color: #888888;
+			}
+			.textArea_hantana_main_feedback_1::-ms-input-placeholder {
+				color: #888888;
+			}
+			#textArea_hantana_main_feedback_id {
+				display: none;
+				box-sizing: border-box !important;
+			}
+			.btn_hantana_main_feedback {
+				font-family: hantanaVazir !important;
+				background: #eee;
+				border: 0;
+				color: #4d4d4d;
+				padding: 3px 23px 0px 23px !important;
+				font-weight: 100 !important;
+				border-radius: 4px !important;
+				cursor: auto;
+				float: right;
+				display: none;
+				margin: 16px 25px 10px 0 !important;
+				box-shadow: none !important;
+				height: 34px !important;
+				font-size: 13px !important;
+				box-sizing: revert !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				text-decoration: none !important;
+			}
+			.text_right_hantana {
+				text-align: right;
+				box-sizing: border-box !important;
+				width: 40%;
+			}
+			.text_left_hantana {
+				text-align: right;
+				box-sizing: border-box !important;
+				width: 60%;
+			}
+			.span_main_hantana {
+				font-family: hantanaVazir !important;
+				text-decoration: underline !important;
+				font-weight: 400;
+				text-decoration-color: #969696 !important;
+				color: #4d4d4d;
+			}
+			.after_send_hantana_main_feedback_float_right {
+				position: fixed !important;
+				width: 153px;
+				z-index: 2147483647;
+				bottom: 22px;
+				text-align: center; /* transform: translateX(-50%) translateY(-50%); */
+				right: 99px;
+				padding: 10px !important;
+				box-sizing: border-box !important;
+				-webkit-box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.3);
+				-moz-box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.3);
+				box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.3);
+				color: #4d4d4d;
+				border-radius: 6px;
+				background: #fff;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.after_send_hantana_main_feedback_float_right:after {
+				content: "";
+				width: 0;
+				height: 0;
+				border-left: 9px solid #fff;
+				clear: both;
+				display: block;
+				box-sizing: border-box !important;
+				border-bottom: 7px solid transparent;
+				border-top: 7px solid transparent;
+				float: right;
+				position: absolute;
+				top: auto;
+				bottom: 21px;
+				margin: auto -19px auto 0;
+				right: 10px;
+			}
+			.after_send_hantana_main_feedback_right {
+				position: fixed !important;
+				width: 153px;
+				z-index: 2147483647;
+				top: 50vh;
+				text-align: center;
+				transform: translateX(-50%) translateY(-50%);
+				right: -25px;
+				padding: 10px !important;
+				box-sizing: border-box !important;
+				-webkit-box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.3);
+				-moz-box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.3);
+				box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.3);
+				color: #4d4d4d;
+				border-radius: 6px;
+				background: #fff;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.after_send_hantana_main_feedback_right:after {
+				content: "";
+				width: 0;
+				height: 0;
+				border-left: 9px solid #fff;
+				clear: both;
+				display: block;
+				box-sizing: border-box !important;
+				border-bottom: 7px solid transparent;
+				border-top: 7px solid transparent;
+				float: right;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				margin: auto -19px auto 0;
+				right: 10px;
+			}
+			.after_send_hantana_main_feedback_float_left {
+				position: fixed !important;
+				width: 153px !important;
+				z-index: 2147483647;
+				bottom: 22px;
+				text-align: center; /* transform: translateX(-50%) translateY(-50%); */
+				left: 99px;
+				padding: 10px !important;
+				box-sizing: border-box !important;
+				-webkit-box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.3);
+				-moz-box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.3);
+				box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.3);
+				color: #4d4d4d;
+				border-radius: 6px;
+				background: #fff;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.after_send_hantana_main_feedback_float_left:after {
+				content: "";
+				width: 0;
+				height: 0;
+				border-right: 9px solid #fff;
+				clear: both;
+				display: block;
+				box-sizing: border-box !important;
+				border-bottom: 7px solid transparent;
+				border-top: 7px solid transparent;
+				float: left;
+				position: absolute;
+				top: auto;
+				bottom: 21px;
+				margin: auto -19px auto 0;
+				left: -9px;
+			}
+			.after_send_hantana_main_feedback_left {
+				position: fixed !important;
+				width: 153px !important;
+				z-index: 2147483647;
+				top: 50vh;
+				text-align: center;
+				transform: translateX(-50%) translateY(-50%);
+				left: 130px;
+				padding: 10px !important;
+				box-sizing: border-box !important;
+				-webkit-box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.3);
+				-moz-box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.3);
+				box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.3);
+				color: #4d4d4d;
+				border-radius: 6px;
+				background: #fff;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.after_send_hantana_main_feedback_left:after {
+				content: "";
+				width: 0;
+				height: 0;
+				border-right: 9px solid #fff;
+				clear: both;
+				display: block;
+				box-sizing: border-box !important;
+				border-bottom: 7px solid transparent;
+				border-top: 7px solid transparent;
+				float: left;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				margin: auto -19px auto 0;
+				left: -9px;
+			}
+			.after_text_hantana_main_feedback {
+				font-family: hantanaVazir !important;
+				font-size: 12px;
+				line-height: 17px;
+				font-weight: 500;
+				text-align: center;
+				position: relative;
+				margin: 1px 0 0 0 !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				color: #111 !important;
+			}
+			.after_hantana_main_close_feedback {
+				background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgMzQ4LjMzMyAzNDguMzM0IiB4bWxuczp2PSJodHRwczovL3ZlY3RhLmlvL25hbm8iPjxwYXRoIGQ9Ik0zMzYuNTYgNjguNjFMMjMxLjAxNiAxNzQuMTY1bDEwNS41NDMgMTA1LjU1YzE1LjcgMTUuNzA1IDE1LjcgNDEuMTQ1IDAgNTYuODUtNy44NDQgNy44NDQtMTguMTI4IDExLjc3LTI4LjQwNyAxMS43Ny0xMC4yOTYgMC0yMC41OC0zLjkyLTI4LjQyLTExLjc3bC0xMDUuNTY2LTEwNS41Nkw2OC42MSAzMzYuNTYzYy03Ljg0MyA3Ljg0NC0xOC4xMjggMTEuNzctMjguNDE2IDExLjc3cy0yMC41NjMtMy45Mi0yOC40MTMtMTEuNzdjLTE1LjctMTUuNjk4LTE1LjctNDEuMTQgMC01Ni44NWwxMDUuNTQtMTA1LjU1TDExLjc3NCA2OC42MWMtMTUuNy0xNS43LTE1LjctNDEuMTQ1IDAtNTYuODQ0QzI3LjQ3LTMuOTIgNTIuOS0zLjkyIDY4LjYwMyAxMS43NjdMMTc0LjE2NiAxMTcuMzIgMjc5LjcyIDExLjc2N2MxNS43MDUtMTUuNjg3IDQxLjE0LTE1LjY4NyA1Ni44MzIgMCAxNS43MDUgMTUuNyAxNS43MDUgNDEuMTQ1LjAwNiA1Ni44NDR6IiBmaWxsPSIjZmZmIi8+PC9zdmc+") !important; /* background-image: url(https://hantana.org/widgets/img/delete.svg) !important; */
+				width: 20px;
+				height: 20px;
+				background-size: 8px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				border-radius: 50px;
+				position: absolute;
+				right: -10px;
+				top: -10px;
+				cursor: pointer;
+				box-sizing: border-box !important;
+				display: none;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			#div_add_after_send_into_hantana {
+				box-sizing: border-box !important;
+				display: none;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_all_items_feedback_hantana {
+				box-sizing: border-box !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.label_under_images_hantana {
+				font-family: hantanaVazir !important;
+				font-weight: 500 !important;
+				font-size: 12px !important;
+				padding: 0 !important;
+				margin: 0 !important;
+				line-height: 5px !important;
+				text-align: center !important;
+				position: absolute !important;
+				width: 53px;
+				display: none;
+			}
+			.des_text_show_hantana {
+				font-family: hantanaVazir !important;
+				letter-spacing: 0 !important;
+				margin: 0px !important;
+				padding: 12px 15px 0 15px !important;
+				box-sizing: border-box !important;
+				font-size: 13px !important;
+				font-weight: 100;
+				white-space: normal;
+				text-align: center !important;
+				color: #111 !important;
+			}
+			.hantana_div_screenShot_feedback {
+				/* display: none; */
+				float: left !important;
+				margin-top: -47px !important;
+				margin-left: 13px !important;
+				position: absolute !important;
+			}
+			[data-hantana-cursor-pointer],
+			[data-hantana-cursor-pointer] * {
+				cursor: pointer !important;
+				user-select: none;
+			}
+			.hantana_img_screenShot_feedback {
+				width: 25px;
+				opacity: 0.6;
+				margin-top: 10px;
+				cursor: pointer;
+				user-select: none;
+				user-drag: none;
+				user-select: none;
+				-moz-user-select: none;
+				-webkit-user-drag: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+			}
+			.hantana_img_screenShot_feedback:hover {
+				opacity: 1 !important;
+			}
+			.hantana_tooltip_screenShot {
+				font-family: hantanaVazir;
+				font-size: 11px;
+				position: absolute;
+				background: #222;
+				border-radius: 5px;
+				color: #fff;
+				padding: 7px 8px;
+				left: 38px;
+				top: 6px;
+				display: none;
+			}
+			.hantana_tooltip_screenShot:after {
+				content: "";
+				border-top: 8px solid transparent;
+				border-right: 10px solid #222;
+				border-bottom: 10px solid transparent;
+				background-color: transparent;
+				position: absolute;
+				left: -9px;
+				top: 6px;
+			}
+			.darkDivScreenShotMainTop {
+				width: 320px !important;
+				margin: 0 auto !important;
+				color: #fff;
+				height: 44px;
+				border-radius: 0 0 40px 40px;
+				text-align: center;
+				padding-top: 2px !important;
+				position: fixed !important;
+				right: 0;
+				left: 0;
+				top: 3px;
+				z-index: 2147483647;
+			}
+			.darkDivScreenShotMain {
+				z-index: 2147483647;
+				position: fixed !important;
+				top: 0;
+				left: 0;
+				height: auto !important;
+				width: 100%;
+				background: transparent;
+			}
+			.divScreenShotTop {
+				display: inline-block;
+				vertical-align: middle;
+				height: 35px;
+				cursor: pointer;
+			}
+			.pScreenShotTop {
+				display: inline-block;
+				vertical-align: middle;
+				font-family: hantanaVazir !important;
+				font-size: 13px;
+				padding: 0 !important;
+				margin: 0 !important;
+			} /* survey */
+			.animated_hantana {
+				-webkit-animation-duration: 1s;
+				animation-duration: 1s;
+				-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
+			}
+			.hingeFlipIn_hantana_animate {
+				animation-name: hingeFlipIn_hantana;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.pulse_hantana_animate {
+				-webkit-animation-name: pulse_hantana;
+				animation-name: pulse_hantana;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.fadeIn_hantana_animate {
+				-webkit-animation-name: fadeIn_hantana;
+				animation-name: fadeIn_hantana;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_main_hantana_survey {
+				position: fixed !important;
+				border-bottom: 0;
+				width: 329px; /*display: none;*/ /* box-shadow: 0 100px 100px 0 rgba(0,0,0,.35) !important; */
+				box-shadow: 0 25px 100px 0 rgba(0, 0, 0, 0.35) !important;
+				z-index: 2147483647;
+				padding: 0 !important;
+				border-radius: 4px 4px 0 0;
+				box-sizing: border-box !important;
+				white-space: nowrap;
+				margin: 0 auto !important;
+				color: #fff;
+				bottom: -560px;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				direction: ltr !important; /*overflow-y: scroll;*/ /*max-height: 450px;*/
+			}
+			.div_main_hantana_survey_1 {
+				overflow-y: auto;
+				max-height: 450px;
+				padding: 8px 0 0 0 !important;
+				-webkit-overflow-scrolling: touch;
+				overscroll-behavior: contain;
+				scrollbar-width: thin;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_main_hantana_survey_1::-webkit-scrollbar-track {
+				background-color: #58626c;
+			}
+			.div_main_hantana_survey_1::-webkit-scrollbar {
+				width: 6px;
+				background-color: #58626c;
+			}
+			.div_main_hantana_survey_1::-webkit-scrollbar-thumb {
+				background-color: #707d8c;
+			}
+			.div_main_hantana_survey_open {
+				position: absolute !important;
+				height: 39px;
+				margin: 0 auto !important;
+				top: -38px;
+				font-size: 16px;
+				padding: 0 21px 0 21px !important;
+				border-radius: 4px 4px 0 0;
+				cursor: pointer;
+				min-width: 118px;
+				box-sizing: border-box !important;
+				text-align: center;
+				display: flex !important;
+				align-items: center !important;
+				justify-content: center !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				direction: ltr !important;
+			}
+			.div_main_hantana_survey_open_min {
+				font-family: hantanaVazir !important;
+				position: absolute !important;
+				height: 26px !important;
+				margin: 0 auto !important;
+				top: -26px;
+				font-size: 16px !important;
+				color: #fff;
+				padding: 2px 21px 0 21px !important;
+				border-radius: 4px 4px 0 0 !important;
+				cursor: pointer;
+				width: 65px !important;
+				text-align: center !important;
+				box-sizing: border-box !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				display: flex !important;
+				flex-direction: column !important;
+				justify-content: center !important;
+				align-items: center !important;
+			}
+			.div_main_hantana_survey_open_min p {
+				display: none !important;
+			}
+			.div_main_hantana_survey_open_min img {
+				margin-left: 0px !important;
+			}
+			.img_hantana_main_survey_2 {
+				width: 15px;
+				height: 15px;
+				box-sizing: border-box !important;
+				transition: all 0.3s ease;
+				vertical-align: middle;
+				margin-left: 7px !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				line-height: 0 !important;
+			}
+			.p_hantana_main_open_1 {
+				font-family: hantanaVazir !important;
+				text-align: center;
+				color: #fff;
+				margin: 0 !important;
+				padding: 0 !important;
+				vertical-align: middle;
+				font-size: 14px;
+				display: inline-block;
+				font-weight: 400;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+			}
+			.p_hantana_main_survey_1 {
+				font-family: hantanaVazir !important;
+				text-align: center;
+				color: #fff;
+				font-size: 15px;
+				line-height: 24px;
+				box-sizing: border-box !important;
+				white-space: normal;
+				padding: 0 20px;
+				margin: 0 !important;
+				-webkit-text-size-adjust: none;
+				-ms-text-size-adjust: none;
+				-moz-text-size-adjust: none;
+				font-weight: 400;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_hantana_main_survey_1 {
+				padding: 10px 0 !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_hantana_main_100_survey {
+				width: 100%;
+				text-align: center;
+				white-space: nowrap;
+				box-sizing: border-box !important;
+				scrollbar-width: thin;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_hantana_main_100_survey_2 {
+				width: 100%;
+				text-align: center;
+				white-space: nowrap;
+				box-sizing: border-box !important;
+				scrollbar-width: thin;
+				display: flex;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_hantana_main_100_survey_1 {
+				width: 100%;
+				text-align: center;
+				box-sizing: border-box !important;
+				display: flex; /* border-bottom: 1px solid #656E77; */
+				padding: 13px 5px !important;
+				cursor: pointer;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.p_hantana_main_survey_2 {
+				font-family: hantanaVazir !important;
+				font-size: 12px !important;
+				font-weight: 100;
+				text-align: left;
+				box-sizing: border-box !important;
+				color: #ffffff;
+				padding: 22px 0px 0px 5px !important;
+				margin: 0 !important;
+				-webkit-text-size-adjust: none;
+				-ms-text-size-adjust: none;
+				-moz-text-size-adjust: none;
+				line-height: normal;
+				letter-spacing: 0.2px;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				display: flex;
+				direction: ltr;
+			}
+			.span_main_hantana2 {
+				text-decoration: underline !important;
+				text-decoration-color: #969696 !important;
+				color: #ffffff;
+				-webkit-text-size-adjust: none;
+				-ms-text-size-adjust: none;
+				-moz-text-size-adjust: none;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_hantana_main_50_survey {
+				width: 50%;
+				text-align: center;
+				white-space: nowrap;
+				display: block;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.text_right_hantana2 {
+				text-align: right;
+				box-sizing: border-box !important;
+				-webkit-text-size-adjust: none;
+				-ms-text-size-adjust: none;
+				-moz-text-size-adjust: none;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				width: 50%;
+			}
+			.text_left_hantana2 {
+				text-align: right;
+				box-sizing: border-box !important;
+				-webkit-text-size-adjust: none;
+				-ms-text-size-adjust: none;
+				-moz-text-size-adjust: none;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				width: 50%;
+			}
+			.btn_hantana_main_survey {
+				font-family: hantanaVazir !important;
+				font-size: 14px !important;
+				border: 0; /* color: #000000; */
+				padding: 8px 16px !important;
+				font-weight: 100 !important;
+				border-radius: 4px;
+				cursor: auto;
+				float: right;
+				margin: 14px 7px 0 0 !important;
+				height: 34px !important;
+				line-height: 0 !important;
+				box-sizing: revert !important;
+				box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+				opacity: 1 !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				text-decoration: none !important;
+			}
+			.hantana_button_question_survey_skip {
+				font-family: hantanaVazir !important;
+				font-size: 14px !important;
+				border: 0;
+				color: #ffffff;
+				padding: 8px 2px !important;
+				font-weight: 100 !important;
+				border-radius: 0;
+				cursor: pointer;
+				float: right;
+				margin: 14px 12px 0 0 !important;
+				height: 34px !important;
+				line-height: 0 !important;
+				box-sizing: revert !important;
+				box-shadow: none;
+				opacity: 1 !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				text-decoration: none !important;
+				background: transparent;
+			}
+			.div_hantana_main_after_send_survey {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				border-radius: 4px 4px 0 0;
+				display: flex;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.p_hantana_main_survey_3 {
+				font-family: hantanaVazir !important;
+				white-space: normal;
+				text-align: center;
+				padding: 10px 20px;
+				color: #fff;
+				margin: 0 !important;
+				line-height: 25px;
+				align-self: center;
+				-webkit-text-size-adjust: none;
+				-ms-text-size-adjust: none;
+				-moz-text-size-adjust: none;
+				width: 100%;
+				font-weight: 500;
+				font-size: 15px;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_padding_right_left_15_main_survey {
+				padding: 0 10px !important;
+				height: 60px;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_hantana_main_20_survey {
+				width: 20%;
+				text-align: center;
+				display: flex;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_hantana_main_survey_inner_1 {
+				align-self: center;
+				margin: 0 auto !important;
+				position: relative;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_hantana_main_survey_inner_2 {
+				align-self: center;
+				position: relative;
+				width: 100%;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_hantana_main_80_survey {
+				width: 80%;
+				text-align: center;
+				white-space: nowrap; /* display: flex; */
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.textarea_comment_survey_hantana {
+				font-family: hantanaVazir !important;
+				background: #fff !important;
+				color: #4d4d4d !important;
+				width: 100% !important;
+				border: 0;
+				font-size: 12px !important;
+				padding: 4px 6px 0px 6px !important;
+				box-sizing: border-box !important;
+				border-radius: 5px !important;
+				margin: 2px 0 4px 0 !important;
+				direction: ltr;
+				height: 51px !important;
+				font-weight: 500 !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				text-align: left !important;
+				resize: none;
+				display: none;
+			}
+			.div_check_main_hantana_div_1 {
+				height: 25px;
+				width: 25px;
+				border: 1px solid #c8c8c8;
+				border-radius: 25px;
+				margin: 0 auto !important;
+				text-align: center;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_check_box_main_hantana_div {
+				height: 25px;
+				width: 25px;
+				border: 1px solid #c8c8c8;
+				border-radius: 5px;
+				margin: 0 auto !important;
+				text-align: center;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.p_hantana_main_survey_4 {
+				font-family: hantanaVazir !important;
+				white-space: normal;
+				text-align: left;
+				font-weight: 100;
+				font-size: 14px;
+				margin: 2px 10px 0 10px !important;
+				color: #dde5ec;
+				line-height: normal;
+				letter-spacing: normal;
+				user-select: none;
+				-webkit-text-size-adjust: none;
+				-ms-text-size-adjust: none;
+				-moz-text-size-adjust: none;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.img_check_main_hantana_img_1 {
+				width: 14px;
+				margin: 6px auto 0 auto !important;
+				display: none;
+				user-select: none;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.p_welcome_main_hantana_1 {
+				font-family: hantanaVazir !important;
+				position: absolute !important;
+				background: #ffffff;
+				width: 153px;
+				margin: auto !important;
+				top: -40px;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				white-space: normal;
+				font-size: 12px !important;
+				padding: 7px 14px !important;
+				font-weight: 500;
+				border-radius: 4px;
+				display: none;
+				box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.3);
+				color: #4d4d4d;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				line-height: 18px !important;
+			}
+			.p_welcome_main_hantana_1::after {
+				content: "";
+				width: 0;
+				height: 0;
+				border-top: 9px solid #ffffff;
+				clear: both;
+				display: block;
+				box-sizing: border-box !important;
+				border-right: 9px solid transparent;
+				border-left: 9px solid transparent;
+				position: absolute;
+				right: 0;
+				left: 0;
+				margin: auto;
+				bottom: -8px;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.img_hantana_main_survey_logo_power_fa {
+				width: 69px;
+				vertical-align: middle;
+				margin: -1px 2px 0 0px !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.img_hantana_main_survey_logo_power_en {
+				width: 69px;
+				vertical-align: middle;
+				margin: -1px 0 0 2px !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.hantana_email_inp_survey {
+				font-family: hantanaVazir !important;
+				background: #fff !important;
+				color: #4d4d4d !important;
+				width: 100% !important;
+				border: 0 !important;
+				font-size: 14px !important;
+				padding: 10px 10px 7px 10px !important;
+				box-sizing: border-box !important;
+				border-radius: 5px !important;
+				margin: 0 0 5px 0 !important;
+				direction: ltr;
+				height: 42px !important;
+				font-weight: 500 !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				text-align: left !important;
+			}
+			.hantana_email_div_question_survey {
+				padding: 5px 15px !important;
+			}
+			.hantana_email_inp_survey::-webkit-input-placeholder {
+				text-align: right;
+			}
+			.hantana_email_inp_survey:-moz-placeholder {
+				text-align: right;
+			}
+			.hantana_email_inp_survey::-moz-placeholder {
+				text-align: right;
+			}
+			.hantana_email_inp_survey:-ms-input-placeholder {
+				text-align: right;
+			}
+			.hantana_email_inp_survey {
+				direction: rtl !important;
+			}
+			.hantana_email_inp_survey::placeholder {
+				text-align: right;
+			} /* newsletter1 */
+			.animated_hantana {
+				-webkit-animation-duration: 1s;
+				animation-duration: 1s;
+				-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.hingeFlipIn_hantana_animate {
+				animation-name: hingeFlipIn_hantana;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.pulse_hantana_animate {
+				-webkit-animation-name: pulse_hantana;
+				animation-name: pulse_hantana;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.fadeIn_hantana_animate {
+				-webkit-animation-name: fadeIn_hantana;
+				animation-name: fadeIn_hantana;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_hantana_all_main_newsletter1 {
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_main_hantana_newsletter1 {
+				font-family: hantanaVazir !important;
+				position: fixed !important;
+				border-bottom: 0;
+				width: 360px;
+				bottom: -500px;
+				box-shadow: 0 100px 100px 0 rgba(0, 0, 0, 0.35) !important;
+				padding: 0 15px !important;
+				z-index: 2147483647;
+				border-radius: 4px 4px 0 0;
+				box-sizing: border-box !important;
+				white-space: nowrap;
+				margin: 0 auto; /*max-height: 230px;*/
+				display: none;
+				justify-content: center;
+				align-items: center;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_main_hantana_newsletter1_open {
+				font-family: hantanaVazir !important;
+				position: absolute !important;
+				height: 26px !important;
+				margin: 0 auto !important;
+				top: -26px;
+				font-size: 16px !important;
+				color: #fff;
+				padding: 2px 21px 0 21px !important;
+				border-radius: 4px 4px 0 0 !important;
+				cursor: pointer;
+				width: 65px !important;
+				text-align: center !important;
+				box-sizing: border-box !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				display: flex !important;
+				flex-direction: column !important;
+				justify-content: center !important;
+				align-items: center !important;
+			}
+			.img_hantana_main_newsletter_2 {
+				width: 15px;
+				box-sizing: border-box !important;
+				transition: all 0.3s ease;
+				vertical-align: middle;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.p_hantana_main_newsletter1_1 {
+				font-family: hantanaVazir !important;
+				text-align: center;
+				color: #fff;
+				font-size: 15px;
+				line-height: 24px;
+				white-space: normal;
+				margin: 15px 10px !important;
+				font-weight: 500;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.input_hantana_main_newsletter1_1 {
+				font-family: hantanaVazir !important;
+				background: #fff !important;
+				color: #4d4d4d !important;
+				width: 100% !important;
+				border: 0 !important;
+				font-size: 14px !important;
+				padding: 10px 10px 7px 10px !important;
+				box-sizing: border-box !important;
+				border-radius: 5px !important;
+				margin: 0 0 5px 0 !important;
+				direction: ltr;
+				height: 42px !important;
+				font-weight: 500 !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				text-align: left !important;
+			}
+			.input_hantana_main_newsletter1_1::placeholder {
+				color: #888888;
+				opacity: 1;
+			}
+			.input_hantana_main_newsletter1_1:-ms-input-placeholder {
+				color: #888888;
+			}
+			.input_hantana_main_newsletter1_1::-ms-input-placeholder {
+				color: #888888;
+			}
+			.input_hantana_main_newsletter1_1:focus {
+				text-align: left !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.img_hantana_main_newsletter1_logo_power_fa {
+				width: 69px;
+				vertical-align: middle;
+				margin: -1px 2px 0 0px;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.img_hantana_main_newsletter1_logo_power_en {
+				width: 69px;
+				vertical-align: middle;
+				margin: -1px 0 0 2px;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_hantana_main_100_newsletter1 {
+				width: 100%;
+				text-align: center;
+				white-space: nowrap;
+				box-sizing: border-box !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.p_hantana_main_newsletter1_2 {
+				font-family: hantanaVazir !important;
+				font-size: 12px !important;
+				font-weight: 100;
+				text-align: left !important;
+				padding: 16px 20px 10px 8px !important;
+				box-sizing: border-box !important;
+				color: #ffffff !important;
+				margin: 8px 0 0 0 !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				display: flex !important;
+				direction: ltr !important;
+				line-height: normal;
+				letter-spacing: 0.2px;
+			}
+			.span_main_hantana2 {
+				text-decoration: underline !important;
+				text-decoration-color: #969696 !important;
+				color: #ffffff;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.div_hantana_main_flex_newsletter1 {
+				display: flex !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				direction: ltr !important;
+			}
+			.div_hantana_main_50_newsletter1 {
+				width: 50%;
+				text-align: center;
+				white-space: nowrap;
+				display: block;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.text_right_hantana2_newsletter1 {
+				text-align: right;
+				box-sizing: border-box !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				width: 40%;
+			}
+			.text_left_hantana2_newsletter1 {
+				text-align: right;
+				box-sizing: border-box !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				width: 60%;
+			}
+			.btn_hantana_main_newsletter1 {
+				font-family: hantanaVazir !important;
+				background: #5e5e5e !important;
+				border: 0 !important;
+				color: #ffffff !important;
+				padding: 10px 23px 6px 23px !important;
+				font-weight: 100 !important;
+				border-radius: 4px;
+				float: right !important;
+				margin: 12px 14px 0 0 !important;
+				height: 38px !important;
+				box-sizing: revert !important;
+				box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15) !important;
+				font-size: 14px !important;
+				cursor: not-allowed;
+				opacity: 0.5;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				text-decoration: none !important;
+			}
+			.div_hantana_main_after_send_newsletter1 {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				border-radius: 4px 4px 0 0;
+				display: none;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.p_hantana_main_newsletter1_3 {
+				font-family: hantanaVazir !important;
+				white-space: normal;
+				text-align: center;
+				padding: 10px 20px;
+				color: #fff;
+				line-height: 25px;
+				margin: 15px 5px 15px 5px;
+				font-weight: bold;
+				font-size: 16px;
+				letter-spacing: normal;
+				align-self: center;
+				width: 100%;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.p_hantana_main_newsletter1_1 {
+				font-family: hantanaVazir !important;
+				text-align: center;
+				color: #fff;
+				font-size: 15px;
+				line-height: 24px;
+				white-space: normal;
+				margin: 15px 10px !important;
+				font-weight: 500;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.input_hantana_main_text_survey {
+				font-family: hantanaVazir !important;
+				background: #fff !important;
+				color: #4d4d4d !important;
+				width: 100% !important;
+				border: 0;
+				font-size: 14px !important;
+				padding: 10px 10px 7px 10px !important;
+				box-sizing: border-box !important;
+				border-radius: 5px !important;
+				margin: 0 0 5px 0 !important;
+				direction: ltr;
+				height: 42px !important;
+				font-weight: 500 !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				text-align: left !important;
+			}
+			.input_hantana_main_text_survey::placeholder {
+				color: #888888;
+				opacity: 1;
+			}
+			.input_hantana_main_text_survey:-ms-input-placeholder {
+				color: #888888;
+			}
+			.input_hantana_main_text_survey::-ms-input-placeholder {
+				color: #888888;
+			}
+			.input_hantana_main_text_survey:focus {
+				text-align: left !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.input_hantana_main_long_text_survey {
+				font-family: hantanaVazir !important;
+				background: #fff !important;
+				color: #4d4d4d !important;
+				width: 100% !important;
+				border: 0;
+				font-size: 14px !important;
+				padding: 10px 10px 7px 10px !important;
+				box-sizing: border-box !important;
+				border-radius: 5px !important;
+				margin: 0 0 5px 0 !important;
+				direction: ltr;
+				height: 115px !important;
+				font-weight: 500 !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+				text-align: left !important;
+				resize: none;
+			}
+			.input_hantana_main_long_text_survey::placeholder {
+				color: #888888;
+				opacity: 1;
+			}
+			.input_hantana_main_long_text_survey:-ms-input-placeholder {
+				color: #888888;
+			}
+			.input_hantana_main_long_text_survey::-ms-input-placeholder {
+				color: #888888;
+			}
+			.input_hantana_main_long_text_survey:focus {
+				text-align: left !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.row_main_100_rate_survey {
+				display: flex;
+				width: 100%;
+				text-align: center;
+				white-space: nowrap;
+				box-sizing: border-box !important;
+			}
+			.col_rate_survey_hantana {
+				font-family: hantanaVazir !important;
+				margin: 0 3px;
+				flex: 1;
+				color: #fff;
+				font-weight: normal;
+				font-size: 14px;
+				padding: 19px 0 17px 0 !important;
+				border-radius: 4px; /* border-radius: 4px 4px 40px 40px; */
+				cursor: pointer;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				box-sizing: border-box;
+				line-height: 0 !important;
+				cursor: pointer;
+			}
+			.col_rate_survey_hantana:hover {
+				opacity: 0.7;
+			}
+			.text_rate_left_hantana {
+				flex: 1;
+				text-align: left;
+				padding: 5px 4px;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+				font-size: 13px !important;
+				font-family: hantanaVazir !important;
+				user-select: none;
+			}
+			.text_rate_right_hantana {
+				flex: 1;
+				text-align: right;
+				padding: 5px 4px;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+				font-size: 13px !important;
+				font-family: hantanaVazir !important;
+				user-select: none;
+			}
+			.message_tag_survey {
+				font-family: hantanaVazir !important;
+				font-size: 15px;
+				padding: 8px !important;
+				margin: 0 0 5px 0 !important;
+				white-space: normal !important;
+				text-align: center !important;
+				white-space: pre-wrap !important;
+			}
+			.thankYou_message_text {
+				font-family: hantanaVazir !important;
+				font-size: 12px;
+				padding: 8px !important;
+				margin: 0 0 5px 0 !important;
+				white-space: normal !important;
+				text-align: center !important;
+				font-weight: 100;
+			}
+			.accept_deny_btn_thankyou {
+				font-family: hantanaVazir !important;
+				border: 0;
+				border-radius: 5px;
+				box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15) !important;
+				padding: 4px 15px;
+				margin: 5px;
+				width: 60px;
+				text-align: center;
+				vertical-align: middle;
+				height: 38px;
+				cursor: pointer;
+			}
+			.deny_btn_thankyou {
+				width: 27px;
+				height: 27px;
+				margin: 0px auto;
+			}
+			.accept_btn_thankyou {
+				width: 31px;
+				height: 31px;
+				margin: 0 auto;
+			}
+			.hantana_main_thankyou_box_1 {
+				margin: 0 auto; /* background: #759185; */ /* background:rgba(223, 223, 223, 0.2); */
+				width: 85%;
+				border-radius: 3px;
+				display: inline-block;
+				margin-bottom: 12px;
+				padding-bottom: 20px;
+			}
+			.hantana_p_thankyou_box_1 {
+				color: #333;
+				direction: rtl;
+				font-family: hantanaVazir !important;
+				font-size: 15px;
+				display: block;
+				margin: 18px 0 8px 0;
+				padding: 0 10px !important;
+			}
+			.hantana_btn_thankyou_box_1 {
+				background: #3c3c3c !important;
+				box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+				border-radius: 3px;
+				border: 0;
+				color: #fff;
+				font-family: hantanaVazir !important;
+				font-size: 13px;
+				padding: 7px 35px;
+				cursor: pointer;
+				display: inline-block;
+				margin: 5px auto 3px auto !important;
+			}
+			.hantana_btn_thankyou_box_1:hover {
+				background: #000;
+			}
+			.hantana_img_thankyou_box_1 {
+				user-select: none;
+				display: block;
+				margin: 7px auto 0 auto;
+			}
+			.hantana_a_thankyou_box_1 {
+				text-decoration: none !important;
+				color: #fff !important;
+			}
+			.hantana_img_powred_external_1 {
+				vertical-align: middle;
+				margin: -6px 2px 0 0px !important;
+				-moz-transform-origin: initial !important;
+				-webkit-transform-origin: initial !important;
+				-o-transform-origin: initial !important;
+				-ms-transform-origin: initial !important;
+				transform-origin: initial !important;
+			}
+			.hantana-animate-right {
+				position: relative;
+				animation: animaterighthantana 0.4s;
+			} /* popup */
+			.hantana_main_div_survey_popup {
+				position: fixed !important;
+				z-index: 2147483648;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.8);
+				left: 0;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				display: flex !important;
+				flex-direction: row !important;
+				flex-wrap: wrap !important;
+				justify-content: center !important;
+				align-items: center !important;
+				transition: opacity 0.5s;
+			}
+			.hantana_box_div_survey_popup {
+				width: 550px;
+				padding: 16px 20px 5px 20px !important;
+				text-align: center;
+				background: #fff;
+				border-radius: 6px;
+				-moz-border-radius: 6px;
+				-webkit-border-radius: 6px;
+				box-shadow: 0 3px 24px rgba(0, 0, 0, 0.16),
+					0 3px 6px rgba(0, 0, 0, 0.24);
+				max-height: 375px;
+				overflow: auto;
+			}
+			.hantana_box_close_img_div_survey_popup {
+				cursor: pointer;
+				user-select: none;
+			}
+			.hantana_box_100_div_survey_popup {
+				width: 100%;
+			}
+			.hantana_box_p1_div_survey_popup {
+				min-height: 45px;
+				width: 100%;
+				text-align: center;
+				padding: 5px 10px !important;
+				font-size: 24px;
+				color: #242424;
+				overflow: hidden;
+				direction: rtl;
+				margin-top: 58px !important;
+				font-family: hantanaVazir;
+			}
+			.hantana_box_p2_div_survey_popup {
+				min-height: 36px;
+				width: 100%;
+				text-align: center;
+				padding: 5px 10px !important;
+				font-size: 16px;
+				color: #666;
+				overflow: hidden;
+				direction: rtl;
+				margin-top: 17px !important;
+			}
+			.hantana_box_p3_div_survey_popup {
+				text-align: center;
+				margin-top: 3px !important;
+				direction: rtl;
+				font-size: 14px;
+				padding: 8px !important;
+				cursor: pointer;
+				user-select: none;
+			}
+			.hantana_box_p4_div_survey_popup {
+				text-align: center;
+				font-size: 11px;
+				padding: 8px !important;
+				direction: ltr;
+				float: left;
+				margin: 10px 0 13px 5px !important;
+			}
+			.hantana_box_btn_div_survey_popup {
+				box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 2px,
+					rgba(0, 0, 0, 0.12) 0px 1px 3px;
+				font-size: 18px;
+				font-weight: 700;
+				display: inline-block;
+				vertical-align: top;
+				background: rgb(66, 202, 73) none repeat scroll 0% 0%;
+				color: rgb(255, 255, 255);
+				border: 0px none;
+				text-align: center;
+				direction: rtl;
+				padding: 12px 65px !important;
+				margin-top: 24px !important;
+				cursor: pointer;
+				font-family: hantanaVazir !important;
+				border-radius: 4px;
+				user-select: none;
+				margin-bottom: 0 !important;
+			}
+			.hantana-survey-media-1 {
+				width: 100%;
+				border-radius: 7px;
+				margin-top: 5px;
+			}
+			.hantana-linkify {
+				background: #337ab7;
+				color: #fff;
+				border-radius: 4px;
+				padding: 2px 7px 1px 7px;
+				font-size: 12px;
+				cursor: pointer !important;
+				font-family: hantanaVazir !important;
+			}
+			.hantana-linkify:hover {
+				background: #337ab7;
+				color: #fff;
+				text-decoration: none !important;
+			}
+			.mainIframeDiv {
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				top: 0;
+				left: 0;
+				background: rgba(0, 0, 0, 0.5);
+				z-index: 2147483647;
+			}
+			.iframeDiv {
+				position: fixed;
+				top: 0;
+				left: 0;
+				transform: translate(calc(50vw - 50%), calc(50vh - 50%));
+				width: 60%;
+				height: 70%;
+				border-radius: 10px;
+				z-index: 2147483648;
+				border: 0px;
+			}
+			.mainIframe {
+				border: 0;
+				width: 100%;
+				height: 100%;
+				border-radius: 10px;
+			}
+			.iframeLoadingDiv {
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 100%;
+				width: 100%;
+				z-index: 500000000;
+				text-align: center;
+				background: #eeeeef;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 10px;
+			}
+			.iframeClosePopUp {
+				width: 20px;
+				height: 20px;
+				z-index: 10000;
+				cursor: pointer;
+				border: 0 !important;
+				background-color: rgb(255, 255, 255);
+				position: absolute;
+				right: 18px;
+				top: 20px;
+				border-radius: 5px;
+			}
+			@keyframes animaterighthantana {
+				from {
+					right: -320px;
+					opacity: 0;
+				}
+				to {
+					right: 26px;
+					opacity: 1;
+				}
+			}
+			.hantana-animate-left {
+				position: relative;
+				animation: animatelefthantana 0.4s;
+			}
+			@keyframes animatelefthantana {
+				from {
+					left: -320px;
+					opacity: 0;
+				}
+				to {
+					left: 26px;
+					opacity: 1;
+				}
+			}
+			@media only screen and (max-width: 450px) {
+				@keyframes animateright {
+					from {
+						right: -300px;
+						opacity: 0;
+					}
+					to {
+						right: 0px;
+						opacity: 1;
+					}
+				}
+				@keyframes animatelefthantana {
+					from {
+						left: -320px;
+						opacity: 0;
+					}
+					to {
+						left: 0px;
+						opacity: 1;
+					}
+				} /* feedback1 */
+				.div_hantana_main_feedback_right {
+					width: 100%;
+					border-radius: 0;
+				}
+				.div_hantana_main_feedback_left {
+					width: 100%;
+					border-radius: 0;
+				}
+				.div_hantana_main_feedback_float_right {
+					width: 100%;
+					border-radius: 0;
+				}
+				.div_hantana_main_feedback_float_left {
+					width: 100%;
+					border-radius: 0;
+				}
+				.textArea_hantana_main_feedback_1 {
+					width: 100%;
+					margin-left: 0;
+					height: 110px;
+				}
+				.p_hantana_main_feedback_1 {
+					font-size: 14px !important;
+				}
+				.div_hantana_main_close_feedback {
+					width: 35px;
+					height: 35px;
+					top: -18px;
+				} /* survey */
+				.div_main_hantana_survey {
+					width: 100%;
+					right: 0;
+				} /* newsletter1 */
+				.div_main_hantana_newsletter1 {
+					width: 100%;
+					right: 0;
+				}
+				.iframeDiv {
+					width: 95%;
+					height: 95%;
+					margin-left: -7px;
+				}
+			}
+			@font-face {
+				font-family: hantanaVazir;
+				src: url(https://hantana.org/widgets/fonts/Vazir/Vazir.eot);
+				src: url(https://hantana.org/widgets/fonts/Vazir/Vazir.eot?#iefix)
+						format("embedded-opentype"),
+					url(https://hantana.org/widgets/fonts/Vazir/Vazir.woff2)
+						format("woff2"),
+					url(https://hantana.org/widgets/fonts/Vazir/Vazir.woff) format("woff"),
+					url(https://hantana.org/widgets/fonts/Vazir/Vazir.ttf)
+						format("truetype");
+				font-weight: 400;
+			}
+			@font-face {
+				font-family: hantanaVazir;
+				src: url(https://hantana.org/widgets/fonts/Vazir/Vazir-Bold.eot);
+				src: url(https://hantana.org/widgets/fonts/Vazir/Vazir-Bold.eot?#iefix)
+						format("embedded-opentype"),
+					url(https://hantana.org/widgets/fonts/Vazir/Vazir-Bold.woff2)
+						format("woff2"),
+					url(https://hantana.org/widgets/fonts/Vazir/Vazir-Bold.woff)
+						format("woff"),
+					url(https://hantana.org/widgets/fonts/Vazir/Vazir-Bold.ttf)
+						format("truetype");
+				font-weight: 700;
+			}
+			@font-face {
+				font-family: hantanaVazir;
+				src: url(https://hantana.org/widgets/fonts/Vazir/Vazir-Light.eot);
+				src: url(https://hantana.org/widgets/fonts/Vazir/Vazir-Light.eot?#iefix)
+						format("embedded-opentype"),
+					url(https://hantana.org/widgets/fonts/Vazir/Vazir-Light.woff2)
+						format("woff2"),
+					url(https://hantana.org/widgets/fonts/Vazir/Vazir-Light.woff)
+						format("woff"),
+					url(https://hantana.org/widgets/fonts/Vazir/Vazir-Light.ttf)
+						format("truetype");
+				font-weight: 300;
+			}
+			@font-face {
+				font-family: hantanaVazir;
+				src: url(https://hantana.org/widgets/fonts/Vazir/Vazir-Medium.eot);
+				src: url(https://hantana.org/widgets/fonts/Vazir/Vazir-Medium.eot?#iefix)
+						format("embedded-opentype"),
+					url(https://hantana.org/widgets/fonts/Vazir/Vazir-Medium.woff2)
+						format("woff2"),
+					url(https://hantana.org/widgets/fonts/Vazir/Vazir-Medium.woff)
+						format("woff"),
+					url(https://hantana.org/widgets/fonts/Vazir/Vazir-Medium.ttf)
+						format("truetype");
+				font-weight: 500;
+			}
+			@font-face {
+				font-family: hantanaVazir;
+				src: url(https://hantana.org/widgets/fonts/Vazir/Vazir-Thin.eot);
+				src: url(https://hantana.org/widgets/fonts/Vazir/Vazir-Thin.eot?#iefix)
+						format("embedded-opentype"),
+					url(https://hantana.org/widgets/fonts/Vazir/Vazir-Thin.woff2)
+						format("woff2"),
+					url(https://hantana.org/widgets/fonts/Vazir/Vazir-Thin.woff)
+						format("woff"),
+					url(https://hantana.org/widgets/fonts/Vazir/Vazir-Thin.ttf)
+						format("truetype");
+				font-weight: 100;
+			}
+			@font-face {
+				font-family: hantanaVazir;
+				src: url(https://hantana.org/widgets/fonts/Vazir/Vazir-Black.eot);
+				src: url(https://hantana.org/widgets/fonts/Vazir/Vazir-Black.eot?#iefix)
+						format("embedded-opentype"),
+					url(https://hantana.org/widgets/fonts/Vazir/Vazir-Black.woff2)
+						format("woff2"),
+					url(https://hantana.org/widgets/fonts/Vazir/Vazir-Black.woff)
+						format("woff"),
+					url(https://hantana.org/widgets/fonts/Vazir/Vazir-Black.ttf)
+						format("truetype");
+				font-weight: 900;
+			}
+		</style>
+        {% block style %}
+        {% endblock %}
+	</head>
+
+	<body>
+		{% block content %}
+        {% endblock %}
+
+
+
+		{% block js %}
+        {% endblock %}
+
+		<script src="{% static '/js/bootstrap.bundle.min.js' %}"></script>
+		<script src="{% static '/js/swiper-bundle.min.js' %}"></script>
+		<script src="%{ static '/js/main.js' %}"></script>
+		<script src="{% static '/js/jquery.min.js' %}"></script>
+		<script src="{% static '/js/megamenu.js' %}"></script>
+	</body>
+</html>

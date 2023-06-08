@@ -1,0 +1,34 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <div class=" row">
+            <div class="col-12 col-md-6 mx-auto mt-4">
+                <div class="card shadow py-4 px-37">
+                    <div class="card-body">
+                        <img class="justify-content-center d-flex mx-auto" src="{% static './img/data-cleaning.png' %}" width="200px" alt="" load="'lazy">
+                        <h2 class="py-3 text-center text-muted mb-5 pb-5">پاکسازی فایل اکسل</h2>
+                        
+
+                        <div class="container">
+                            <form method="POST" action="" enctype='multipart/form-data'>
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <div class="pt-5"></div>
+                                <button type="submit" class="btn btn-primary mx-auto d-flex w-100 text-center justify-content-center">پاکسازی و دانلود</button>
+                            </form>
+                        </div>
+
+                        
+                        <br>
+                        
+
+        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

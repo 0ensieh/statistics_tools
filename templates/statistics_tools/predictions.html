@@ -1,0 +1,108 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block style %}
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid pt-5">
+    <div id="chart-container" class></div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script>
+
+    
+    Highcharts.setOptions({
+        chart: {
+            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+            borderRadius: 5,
+            borderWidth: 1,
+            borderColor: '#ccc',
+            plotBackgroundColor: 'rgba(240, 240, 240, 1)',
+            plotBorderWidth: 0
+        },
+        title: {
+            text: 'نمودار پیش بینی'
+        },
+        xAxis: {
+            type: 'datetime'
+        },
+        yAxis: {
+            title: {
+                text: 'مقدار'
+            }
+        },
+        exporting: {
+            buttons: {
+                contextButton: {
+                    menuItems: [
+                        'viewFullscreen', 
+                        'downloadPNG',
+                        'downloadJPEG',
+                        'downloadPDF',
+                        'downloadSVG',
+                        'downloadCSV',
+                        'downloadXLS',
+                        'viewData'
+                    ]
+                }
+            }
+        }, 
+
+        lang: {
+  printChart: "چاپ نمودار",
+  downloadPNG: "دانلود PNG",
+  downloadJPEG: "دانلود JPG",
+  downloadPDF: "دانلود PDF",
+  downloadSVG: "دانلود SVG",
+  downloadCSV: "دانلود CSV",
+  downloadXLS: "دانلود XLS",
+  viewFullscreen: "نمایش تمام صفحه", // Customize the title for "View in full screen"
+  viewData: "نمایش جدول داده", // Customize the title for "Vi
+  exitFullscreen: 'خروج از حالت تمام صفحه'
+
+}
+    });
+
+    var data = JSON.parse('{{ data | safe }}');
+
+    Highcharts.chart('chart-container', {
+        title: {
+            text: 'نمودار پیش بینی',
+            align: 'center'
+        },
+        subtitle: {
+            text: '',
+            align: '',
+        },
+        xAxis: {
+            title: {
+                text: '',
+            },
+            subtitle: {
+                text: '',
+            },
+            type: 'datetime',
+        },
+        yAxis: {
+            title: {
+                text: 'مقدار'
+            }
+        },
+        series: Object.keys(data).map(function(modelName) {
+            return {
+                name: modelName,
+                data: data[modelName].map(function(item) {
+                    return [new Date(item[0]).getTime(), item[1]];
+                })
+            };
+        })
+    });
+</script>
+{% endblock %}
